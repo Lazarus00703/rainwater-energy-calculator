@@ -63,16 +63,9 @@
             color: #000000;
             text-align: center;
         }
-        .logo {
-            position: absolute;
-            top: 40px;
-            right: 1380px;
-            width: 200px; /* Adjust size as needed */
-        }
     </style>
 </head>
 <body>
-    <img src='Rain drop' class="logo" alt="Logo"> 
     <div class="container">
         <h2>Rainwater Energy Calculator</h2>
         <label>Roof Area (m²):</label>
