@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>Rainwater Energy Calculator</title>
@@ -73,11 +72,10 @@
     </style>
 </head>
 <body>
-    <img src="Raindrop logo white.png" class="logo" alt="Logo">
-  
-   <div class="container">
+    <img src="Raindrop logo white.png" class="logo" alt="Logo"> <!-- Add your logo here -->
+    <div class="container">
         <h2>Rainwater Energy Calculator</h2>
-      <label>Roof Area (m²):</label>
+        <label>Roof Area (m²):</label>
         <input type="number" id="roofArea" placeholder="Enter roof area">
         <label>Rainfall Depth (mm):</label>
         <input type="number" id="rainfall" placeholder="Enter rainfall depth in mm">
@@ -86,34 +84,25 @@
         <label>Height from Gutter to Ground (m):</label>
         <input type="number" id="height" placeholder="Enter height from gutter to ground">
         <button onclick="calculateEnergy()">Calculate</button>
-
-  <h3>Result:</h3>
+        <h3>Result:</h3>
         <p id="output"></p>
     </div>
-
-  
-<script>
+    <script>
         function calculateEnergy() {
             let eta_t = 0.85, eta_m = 0.90, eta_g = 0.90;
             let rho = 1000, g = 9.81;
-
             let A_roof = parseFloat(document.getElementById("roofArea").value);
             let Rainfall_mm = parseFloat(document.getElementById("rainfall").value);
             let time_hours = parseFloat(document.getElementById("time").value);
             let H_total = parseFloat(document.getElementById("height").value);
-
             // Convert Rainfall from mm to meters
             let Rainfall = Rainfall_mm / 1000;
-
             // Convert Time from hours to seconds (1 hour = 3600 seconds)
             let t = time_hours * 3600;
-
             // Height H = Height from Gutter to Ground - 1m
             let H = H_total - 1;
-
             // Calculate Electrical Power Output
             let P_electrical = eta_t * eta_m * eta_g * rho * g * ((A_roof * Rainfall) / t) * H;
-
             document.getElementById("output").innerHTML = 
                 `Potential Electrical Power: <b>${P_electrical.toFixed(2)} Watts per hour</b>`;
         }
