@@ -67,12 +67,12 @@
             position: absolute;
             top: 40px;
             right: 1380px;
-            width: 100px; /* Adjust size as needed */
+            width: 200px; /* Adjust size as needed */
         }
     </style>
 </head>
 <body>
-    <img src="Raindrop logo white.png" class="logo" alt="Logo"> <!-- Add your logo here -->
+    <img src="Raindrop logo white.png" class="logo" alt="Logo"> 
     <div class="container">
         <h2>Rainwater Energy Calculator</h2>
         <label>Roof Area (m²):</label>
